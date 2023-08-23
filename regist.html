@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Hobby Registration</title>
+</head>
+<body>
+    <form id="registrationForm">
+        <label>
+            <input type="checkbox" name="hobby" value="reading"> Reading
+        </label>
+        <label>
+            <input type="checkbox" name="hobby" value="sports"> Sports
+        </label>
+        <label>
+            <input type="checkbox" name="hobby" value="music"> Music
+        </label>
+        <label>
+            <input type="checkbox" name="hobby" value="cooking"> Cooking
+        </label>
+        <button type="button" onclick="getSelectedHobbies()">Submit</button>
+    </form>
+
+    <script>
+        function getSelectedHobbies() {
+            const hobbyCheckboxes = document.querySelectorAll('input[name="hobby"]:checked');
+            const selectedHobbies = Array.from(hobbyCheckboxes).map(checkbox => checkbox.value).join(', ');
+            // const hobbiesString = selectedHobbies.join(', ');
+
+            console.log("Selected Hobbies: " + selectedHobbies);
+            // You can do whatever you want with the hobbiesString, like sending it to a server or displaying it on the page.
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Registration Form</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.3/jquery.validate.min.js"></script>
+</head>
+<body>
+    <form id="registrationForm" enctype="multipart/form-data" method="POST">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username"><br>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" ><br>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" ><br>
+
+        <label for="phone">Phone:</label>
+        <input type="text" id="phone" name="phone" ><br>
+
+        <label for="birthdate">Birthdate:</label>
+        <input type="date" id="birthdate" name="birthdate" ><br>
+
+        <label>Gender:</label>
+        <input type="radio" id="male" name="gender" value="male">
+        <label for="male">Male</label>
+        <input type="radio" id="female" name="gender" value="female">
+        <label for="female">Female</label><br>
+
+        <label for="city">City:</label>
+        <select id="city" name="city">
+            <option value="city1">City 1</option>
+            <option value="city2">City 2</option>
+            <!-- Add more cities as needed -->
+        </select><br>
+
+        <label for="profile_picture">Profile Picture:</label>
+        <input type="file" id="profile_picture" name="profile_picture"><br>
+
+        <label>Hobbies:</label>
+        <input type="checkbox" id="hobby1" name="hobbies[]" value="hobby1">
+        <label for="hobby1">Hobby 1</label>
+        <input type="checkbox" id="hobby2" name="hobbies[]" value="hobby2">
+        <label for="hobby2">Hobby 2</label>
+        <!-- Add more hobbies as needed -->
+
+        <button type="submit">Register</button>
+    </form>
+
+    <script src="script.js"></script>
+</body>
+</html>
